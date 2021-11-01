@@ -1,6 +1,5 @@
 package com.example.controller;
 
-import com.example.entity.Billing;
 import com.example.entity.Invoice;
 import com.example.entity.Stock;
 import com.example.entity.TheLogConverter;
@@ -47,9 +46,5 @@ public class InventoryController {
         stockLogService.insert(TheLogConverter.stockLogConverter(stock));
     }
 
-    @RequestMapping(method = RequestMethod.POST)
-    public void updateStocks(@RequestBody Invoice invoice){
-            stockService.updateStocks(invoice);
-    }
 
 }
