@@ -35,9 +35,8 @@ public class ProductController {
     }
 
     @RequestMapping(method = RequestMethod.POST, value = "")
-    public void addProduct(@RequestBody Product product) {
-        productService.insert(product);
-        productLogService.insert(TheLogConverter.productLogConverter(product));
+    public Product addProduct(@RequestBody Product product) {
+        return productService.insert(product);
     }
 
     @RequestMapping(method = RequestMethod.PUT,value ="/{id}")

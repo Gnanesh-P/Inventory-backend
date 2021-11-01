@@ -26,8 +26,8 @@ public class WarehouseController {
     }
 
     @RequestMapping(method = RequestMethod.POST, value = "")
-    public void addWarehouse(@RequestBody Warehouse warehouse) {
-        warehouseService.insert(warehouse);
+    public Warehouse addWarehouse(@RequestBody Warehouse warehouse) {
+        return warehouseService.insert(warehouse);
     }
 
     @RequestMapping(method = RequestMethod.PUT,value ="/{id}")

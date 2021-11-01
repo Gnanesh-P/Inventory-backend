@@ -15,8 +15,8 @@ public class CustomerService {
     @Autowired
     private CustomerRepositry customerRepositry;
 
-    public void insert(Customer supplier) {
-        customerRepositry.save(supplier);
+    public Customer insert(Customer customer) {
+        return customerRepositry.save(customer);
     }
 
 

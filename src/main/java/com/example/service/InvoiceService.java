@@ -15,8 +15,8 @@ public class InvoiceService {
     @Autowired
     private InvoiceRepository invoiceRepository;
 
-    public void insert(Invoice invoice) {
-        invoiceRepository.save(invoice);
+    public Invoice insert(Invoice invoice) {
+        return invoiceRepository.save(invoice);
     }
 
 

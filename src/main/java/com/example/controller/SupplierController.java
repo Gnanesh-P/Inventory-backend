@@ -30,9 +30,8 @@ public class SupplierController {
     }
 
     @RequestMapping(method = RequestMethod.POST, value = "")
-    public void addCategory(@RequestBody Supplier supplier) {
-        supplierService.insert(supplier);
-        supplierLogService.insert(TheLogConverter.supplierLogConverter(supplier));
+    public Supplier addCategory(@RequestBody Supplier supplier) {
+        return supplierService.insert(supplier);
     }
 
     @RequestMapping(method = RequestMethod.PUT,value ="/{id}")

@@ -20,8 +20,8 @@ public class ProductService {
     @Autowired
     public ProductRepository productRepository;
 
-    public void insert(Product product) {
-        productRepository.save(product);
+    public Product insert(Product product) {
+        return productRepository.save(product);
     }
 
     public Optional<Product> find(int id) {

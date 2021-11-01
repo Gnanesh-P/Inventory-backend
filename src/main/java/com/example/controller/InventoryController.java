@@ -8,6 +8,7 @@ import com.example.service.StockService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
 
+import javax.annotation.PostConstruct;
 import java.util.Optional;
 
 @RestController
@@ -29,8 +30,8 @@ public class InventoryController {
     }
 
     @RequestMapping(method = RequestMethod.POST, value = "")
-    public void addStock(@RequestBody Stock stock) {
-        stockService.insert(stock);
+    public Stock addStock(@RequestBody Stock stock) {
+       return  stockService.insert(stock);
 //        stockLogService.insert(TheLogConverter.stockLogConverter(stock));
     }
 
@@ -45,6 +46,9 @@ public class InventoryController {
         stockService.deleteStock(stock);
         stockLogService.insert(TheLogConverter.stockLogConverter(stock));
     }
-
+    @PostMapping("/updateStocks")
+    public void updateStocks(@RequestBody Invoice invoice){
+        stockService.updateStocks(invoice);
+    }
 
 }

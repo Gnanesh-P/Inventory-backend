@@ -26,8 +26,8 @@ public class InvoiceController {
     }
 
     @RequestMapping(method = RequestMethod.POST, value = "")
-    public void addInvoice(@RequestBody Invoice invoice) {
-        invoiceService.insert(invoice);
+    public Invoice addInvoice(@RequestBody Invoice invoice) {
+        return invoiceService.insert(invoice);
     }
 
     @RequestMapping(method = RequestMethod.PUT,value ="/{id}")

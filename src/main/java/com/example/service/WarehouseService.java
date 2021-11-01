@@ -16,8 +16,8 @@ public class WarehouseService {
     @Autowired
     private WarehouseRepository warehouseRepository;
 
-    public void insert(Warehouse warehouse) {
-        warehouseRepository.save(warehouse);
+    public Warehouse insert(Warehouse warehouse) {
+        return warehouseRepository.save(warehouse);
     }
 
 

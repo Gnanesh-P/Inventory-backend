@@ -28,8 +28,8 @@ public class LocationController {
     }
 
     @RequestMapping(method = RequestMethod.POST, value = "")
-    public void addLocation(@RequestBody Location location) {
-        locationService.insert(location);
+    public Location addLocation(@RequestBody Location location) {
+        return locationService.insert(location);
     }
 
     @RequestMapping(method = RequestMethod.PUT,value ="/{id}")

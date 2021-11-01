@@ -21,7 +21,7 @@ public class StockService {
     @Autowired
     private InvoiceRepository invoiceRepository;
 
-    public void insert(Stock stock) {
+    public Stock insert(Stock stock) {
         Iterable<Stock>  stockList = stockRepository.findAll();
         if(!stock.getProduct().isTraceable()){
             Stock finalStock = stock;
@@ -33,7 +33,7 @@ public class StockService {
             }
         }
 
-        stockRepository.save(stock);
+        return stockRepository.save(stock);
     }
 
     public Optional<Stock> findById(int id) {

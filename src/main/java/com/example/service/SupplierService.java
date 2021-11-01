@@ -15,8 +15,8 @@ public class SupplierService {
     @Autowired
     private SupplierRepository supplierRepository;
 
-    public void insert(Supplier supplier) {
-        supplierRepository.save(supplier);
+    public Supplier insert(Supplier supplier) {
+       return supplierRepository.save(supplier);
     }
 
 
