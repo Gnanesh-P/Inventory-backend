@@ -33,6 +33,10 @@ public class CategoryController {
         return  categoryService.insert(category);
     }
 
+    @RequestMapping("/check")
+    public String welcome(){
+        return "Welcome";
+    }
     @RequestMapping(method = RequestMethod.PUT,value ="/{id}")
     public void updateCategory(@RequestBody Category category) {
         categoryService.updateCategory(category);
