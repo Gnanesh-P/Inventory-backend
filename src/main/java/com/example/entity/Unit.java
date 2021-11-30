@@ -9,6 +9,7 @@ import javax.persistence.Id;
 @Data
 public class Unit {
     @Id
+    private int unitId;
     private String unitCode;
-    private String description;
+    private double value;
 }
