@@ -29,6 +29,9 @@ public class Category implements Serializable {
 
 	private int categoryCode;
 
+	@OneToOne
+	@JoinColumn(name="Category_Tax_Code")
+	private Tax tax;
 
 
 

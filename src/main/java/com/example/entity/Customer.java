@@ -11,7 +11,7 @@ import javax.persistence.Id;
 public class Customer {
     @Id
     @GeneratedValue
-    private int id;
+    private int customerId;
     private String cardNumber;
     private String customerName;
     private String mobileNumber;

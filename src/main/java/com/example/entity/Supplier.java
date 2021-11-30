@@ -16,7 +16,7 @@ public class Supplier implements Serializable {
 	@GeneratedValue(strategy=GenerationType.AUTO)
 	private int supplierId;
 
-	private String supplierCompany;
+	private String supplierCode;
 
 	private BigDecimal supplierContact;
 
@@ -34,13 +34,6 @@ public class Supplier implements Serializable {
 		this.supplierId = supplierId;
 	}
 
-	public String getSupplierCompany() {
-		return this.supplierCompany;
-	}
-
-	public void setSupplierCompany(String supplierCompany) {
-		this.supplierCompany = supplierCompany;
-	}
 
 	public BigDecimal getSupplierContact() {
 		return this.supplierContact;
@@ -56,18 +49,6 @@ public class Supplier implements Serializable {
 
 	public void setSupplierName(String supplierName) {
 		this.supplierName = supplierName;
-	}
-
-	public Stock addStock(Stock stock) {
-		stock.setSupplier(this);
-
-		return stock;
-	}
-
-	public Stock removeStock(Stock stock) {
-		stock.setSupplier(null);
-
-		return stock;
 	}
 
 }

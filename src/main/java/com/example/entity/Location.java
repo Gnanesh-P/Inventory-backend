@@ -16,12 +16,18 @@ public class Location {
     @JoinColumn(name = "warehouseId")
     private Warehouse warehouse;
 
-    private String locationCode;
+    private String row;
+
+    private String column;
+
+    private String rackField;
 
     private String locationDescription;
 
-    private String availableSpace;
 
-    private String occupiedSpace;
+
+//    private String availableSpace;
+//
+//    private String occupiedSpace;
 }
 

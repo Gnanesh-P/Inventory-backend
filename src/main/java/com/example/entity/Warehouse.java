@@ -12,13 +12,15 @@ public class Warehouse {
 
     @Id
     @GeneratedValue
-    private int id;
-
     private int warehouseId;
 
-    private String warehouseLocation;
+    private String warehouseCode;
 
-    private String warehouseAddress;
+    private String warehouseCity;
+
+    private String warehouseCountry;
+
+    private String warehouseState;
 
     private String managerName;
 

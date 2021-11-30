@@ -11,31 +11,36 @@ import java.util.List;
 
 @Entity
 @Data
-@NamedQuery(name="Product.findAll", query="SELECT p FROM Product p")
+@NamedQuery(name = "Product.findAll", query = "SELECT p FROM Product p")
 public class Product implements Serializable {
-	private static final long serialVersionUID = 1L;
+    private static final long serialVersionUID = 1L;
 
-	@Id
-	@GeneratedValue(strategy=GenerationType.AUTO)
-	private int productId;
+    @Id
+    @GeneratedValue(strategy = GenerationType.AUTO)
+    private int productId;
 
-	private int productCode;
+    private String productCode;
 
-	private double productBuyingPrice;
+    private double productBuyingPrice;
 
-	private String productName;
+    private String productName;
 
-	private double productSellingPrice;
+    private double productSellingPrice;
 
-	private boolean isTraceable;
+    private boolean isTraceable;
 
-	@ManyToOne
-	@JoinColumn(name="categoryId")
-	private Category category;
+    private int refillQuantity;
+    @ManyToOne
+    @JoinColumn(name = "categoryId")
+    private Category category;
 
-	private Product product;
+    private Product product;
 
-	private boolean traceable;
+    private boolean traceable;
+
+    @OneToOne
+    @JoinColumn(name = "Category_Tax_Code")
+    private Tax tax;
 
 //	@OneToMany(mappedBy="product")
 //	private List<Stock> stocks;
