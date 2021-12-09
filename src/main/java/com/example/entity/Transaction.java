@@ -23,22 +23,22 @@ public class Transaction {
     private Date manufactureDate;
 
     @OneToOne
-    @JoinColumn(name = "locationId")
+    @JoinColumn(name = "locationId",insertable=false, updatable=false)
     private Location location;
     @OneToOne
-    @JoinColumn(name = "locationId")
+    @JoinColumn(name = "locationId",insertable=false, updatable=false)
     private Location toLocation;
     @OneToOne
-    @JoinColumn(name = "locationId")
+    @JoinColumn(name = "locationId",insertable=false, updatable=false)
     private Location fromLocation;
     @OneToOne
-    @JoinColumn(name = "warehouseId")
+    @JoinColumn(name = "warehouseId",insertable=false, updatable=false)
     private Warehouse warehouse;
     @OneToOne
-    @JoinColumn(name = "warehouseId")
+    @JoinColumn(name = "warehouseId",insertable=false, updatable=false)
     private Warehouse fromWarehouse;
     @OneToOne
-    @JoinColumn(name = "warehouseId")
+    @JoinColumn(name = "warehouseId",insertable=false, updatable=false)
     private Warehouse toWarehouse;
 
     @OneToOne

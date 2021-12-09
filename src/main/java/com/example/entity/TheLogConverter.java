@@ -49,7 +49,6 @@ public class TheLogConverter {
     public static SupplierLogEntity supplierLogConverter(Supplier supplier){
         SupplierLogEntity supplierLog=new SupplierLogEntity();
         supplierLog.setSupplierId(supplier.getSupplierId());
-        supplierLog.setSupplierCompany(supplier.getSupplierCompany());
         supplierLog.setSupplierContact(supplier.getSupplierContact());
         supplierLog.setSupplierName(supplier.getSupplierName());
         return supplierLog;
